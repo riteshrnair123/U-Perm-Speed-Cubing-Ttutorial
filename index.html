@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Perm | Speedcubing Tutorials</title>
+    <link rel="icon" href="images/unnamed-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <a href="index.html"><img src="images/unnamed-removebg-preview.png" class="img-cube"></a>
+    <ul>
+        <li>3×3 Tutorials
+        <div class="sub-menu-1">
+            <ul>
+                <li><a href="3×3 tutorials.html">How to solve a 3×3 &#9656;</a></li>
+                <li><a href="CFOP METHOD.html">CFOP Method &#9656;</a></li>
+                <li><a href="Move Notation.html">Move Notation &#9656;</a></li>
+            </ul>
+        </div>
+        </li>
+        <li>Other Tutorials
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#">2×2 &#9656;</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="2×2 tutorials.html">Beginner 2×2 &#9656;</a></li>
+                                <li><a href="Advanced 2×2.html">Advanced 2×2 &#9656;</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="4by4 tutorial.html">4×4 &#9656;</a></li>
+                    <li class="hover-me"><a href="#">Skewb &#9656;</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="skewb notation.html">Skewb Notation &#9656;</a></li>
+                                    <li><a href="skewb tutorials.html">How to solve a Skewb &#9656;</a></li>
+                                </ul>
+                            </div>
+                    </li>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li>Algorithms
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#">2×2 &#9656;</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="2by2 algorithms.html">OLL</a></li>
+                                <li><a href="2by2 cll.html">CLL</a></li>
+                                <li><a href="2by2 pbl.html">PBL</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">3×3 &#9656;</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="3by3 oll.html">OLL</a></li>
+                                <li><a href="3by3 pll.html">PLL</a></li>
+                            </ul>
+                        </div>
+                        <li class="hover-me"><a href="#">Beyond CFOP &#9656;</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="coll.html">COLL</a></li>
+                                </ul>
+                            </div>
+                    <li class="hover-me"><a href="#">4×4 &#9656;</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="4by4 oll.html">4×4 OLL</a></li>
+                                    <li><a href="4by4 pll.html">4×4 PLL</a></li>
+                                </ul>
+                            </div>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="timer.html"> Cube Timer</a></li>
+    </ul>
+    </div>
+    
+<a href="3×3 tutorials.html"> <img src="images/landing-3x3.png" class="img-body"></a>
+<a href="CFOP METHOD.html"><img src="images/landing-cfop (1).png" class="img-body"></a>
+<a href="2×2 tutorials.html"><img src="images/landing-2x2.png" class="img-body"></a>
+<a href="4by4 tutorial.html"><img src="images/landing-4x4.png" class="img-body"></a>
+
+<style>
+    .a1{
+        margin-top: 15px;
+        margin-left: 15px;
+        color: #fff;
+    }
+    *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu-bar{
+    background: rgba(60,60,60);
+    text-align: center;
+}
+body {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li{
+    width:200px;
+    margin: none;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover{
+    background-color: rgba(180,180,180);
+}
+.menu-bar .fa{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 14.5px;
+    background-color: #000;
+    margin-left: -15px
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    margin: none;
+    display: block;
+}
+.img-cube{
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -35px;
+    margin-left: 185px;
+    background-color: #000;
+}
+.img-body{
+    width: 200px;
+    height: 200px;
+    margin-left: 90px;
+    margin-top: 125px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(240,240,240);
+}
+.img-body:hover{
+    background-color: #fff;
+}
+.img-text{
+    align-content: center;
+    position: relative;
+    color: #000;
+    margin-left: 150px;
+    margin-top: -23px;;
+}
+.tutorials1{
+    color: black;
+    border-radius: 3px;
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+@media only screen and(max-width:700px) {
+    .a1{
+        margin-top: 15px;
+        margin-left: 15px;
+        color: #fff;
+    }
+    *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+menu-bar{
+    background: rgba(60,60,60);
+    text-align: center;
+    width: 100%;
+}
+body {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: white;
+}
+menu-bar ul{
+    display: inline-block;
+    list-style: none;
+    color: #fff;
+}
+menu-bar ul li{
+    width:200px;
+    margin: none;
+    padding: 15px;
+}
+menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover{
+    background-color: rgba(180,180,180);
+}
+menu-bar .fa{
+    margin-right: 8px;
+}
+sub-menu-1{
+    display: none;
+}
+menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 14.5px;
+    background-color: #000;
+    margin-left: -15px
+}
+menu-bar ul li:hover .sub-menu-1 ul{
+    margin: none;
+    display: block;
+}
+img-cube{
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+sub-menu-2{
+    display: none;
+}
+hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -35px;
+    margin-left: 185px;
+    background-color: #000;
+}
+img-body{
+    width: 200px;
+    height: 200px;
+    margin-left: 90px;
+    margin-top: 125px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(240,240,240);
+}
+img-body:hover{
+    background-color: #fff;
+}
+img-text{
+    align-content: center;
+    position: relative;
+    color: #000;
+    margin-left: 150px;
+    margin-top: -23px;;
+}
+tutorials1{
+    color: black;
+    border-radius: 3px;
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+}
+</style>
+</body>
+</html>

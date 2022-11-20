@@ -1,0 +1,417 @@
+<HTML>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>U Perm | Timer</title>
+        <link rel="icon" href="images/unnamed-removebg-preview.png">
+        <link rel="stylesheet" href="Homepage.html">
+    </head>
+    <body> 
+        <div class="menu-bar">
+            <a href="index.html"><img src="images/unnamed-removebg-preview.png" alt="" class="img-cube"></a>
+        <ul>
+            <li><a href="#">3×3 Tutorials</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="3×3 tutorials.html">How to solve a 3×3 &#9656;</a></li>
+                    <li><a href="CFOP METHOD.html">CFOP Method &#9656;</a></li>
+                    <li><a href="Move Notation.html">Move Notation &#9656;</a></li>
+                </ul>
+            </div>
+            </li>
+            <li><a href="#">Other Tutorials</a>
+                <div class="sub-menu-1">
+                    <ul>
+                      <li class="hover-me"><a href="#">2×2 &#9656;</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="2×2 tutorials.html">Beginner 2×2 &#9656;</a></li>
+                                <li><a href="Advanced 2×2.html">Advanced 2×2 &#9656;</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="hover-me"><a href="#">4×4 &#9656;</a>
+                      <div class="sub-menu-2">
+                          <ul>
+                              <li><a href="#">Move Notations in a 4×4 </a></li>
+                              <li><a href="#">How to solve a 4×4 </a></li>
+                          </ul>
+                      </div>
+                  </li>
+                        <li class="hover-me"><a href="skewb tutorial.html">Skewb &#9656;</a>
+                          <div class="sub-menu-2">
+                              <ul>
+                                  <li><a href="skewb notation.html">Skewb Notation</a></li>
+                                  <li><a href="skewb tutorials.html">How to solve a Skewb</a></li>
+                              </ul>
+                          </div>
+                  </li>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Algorithms</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li class="hover-me"><a href="#">2×2 &#9656;</a>
+                            <div class="sub-menu-2">
+                                <ul>
+                                    <li><a href="2by2 algorithms.html">OLL</a></li>
+                                    <li><a href="2by2 cll.html">CLL</a></li>
+                                    <li><a href="2by2 pbl.html">PBL</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="hover-me"><a href="#">3×3 &#9656;</a>
+                          <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="3by3 oll.html">OLL</a></li>
+                                <li><a href="3by3 pll.html">PLL</a></li>
+                            </ul>
+                        </div>
+                        <li class="hover-me"><a href="#">Beyond CFOP &#9656;</a>
+                          <div class="sub-menu-2">
+                              <ul>
+                                  <li><a href="coll.html">COLL</a></li>
+                              </ul>
+                          </div>
+                        <li class="hover-me"><a href="#">4×4 &#9656;</a>
+                                <div class="sub-menu-2">
+                                    <ul>
+                                        <li><a href="4by4 oll.html">4×4 OLL</a></li>
+                                        <li><a href="4by4 pll.html">4×4 PLL</a></li>
+                                    </ul>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="timer.html"> Cube Timer</a></li>
+        </ul>
+        </div>
+      <div id="container">
+      <div id = "scram"></div>
+      <div id="timeOut"><span id="min"></span><span id="colon"></span><span id="sec">0</span>.<span id="decimal">00</span></div>
+        <div id = "timeList"></div>
+        <div id = "stats">
+          <button id="clear">Clear Times</button>
+          <span id = "solveNum">Solves: 0</span> <br/>
+          <span id = "overallAv">Average: </span><br/>
+          <span id = "fastest">Best: </span>
+        </div>
+      </div> 
+<style>
+    #container{
+  width: 520px;
+  height: 255px;
+  font-family: "Digital-7";
+
+  overflow-x:auto;
+}
+.a1{
+        margin-top: 15px;
+        margin-left: 15px;
+        color: #fff;
+    }
+    *
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu-bar{
+    background: rgba(60,60,60);
+    text-align: center;
+}
+body{
+    background: rgba(90,90,90);
+    background-position: center;
+    background-size: cover;
+    font-family: Open-sans;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li{
+    width:200px;
+    margin: none;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+}
+.active, .menu-bar ul li:hover{
+    background-color: rgba(180,180,180);
+}
+.menu-bar .fa{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    margin-top: 14.5px;
+    background-color: #000;
+    margin-left: -15px
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    margin: none;
+    display: block;
+}
+.img-cube{
+    width: 45px;
+    height: 45px;
+    margin-top: 2px;
+    position: relative;
+    float: left;
+    cursor: pointer;
+}
+.sub-menu-2{
+    display: none;
+}
+.hover-me:hover .sub-menu-2{
+    position: absolute;
+    display: block;
+    margin-top: -35px;
+    margin-left: 185px;
+    background-color: #000;
+}
+.img-body{
+    width: 200px;
+    height: 200px;
+    margin-left: 90px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(240,240,240);
+}
+.img-body:hover{
+    background-color: #fff;
+}
+.img-text{
+    align-content: center;
+    position: relative;
+    color: #000;
+    margin-left: 150px;
+    margin-top: -23px;;
+}
+.tutorials1{
+    color: black;
+    border-radius: 3px;
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+#timeList{
+  width:  120px;
+  height: 230px;
+  margin-left:310px;
+  overflow-y:auto;
+  padding-top:5px;
+}
+#timeOut{
+  font-size: 5em;
+  width: 310px;
+  height: 310px;
+  position:absolute;
+}
+#stats{
+  width:310px;
+  height:138px;
+  position: absolute;
+  top:175px;
+}
+</style>
+<script>
+    var running = false;
+var interval;
+var decimal = 0;
+var sec = 0;
+var min = 0;
+var cs = 0;
+var decimalOut = document.getElementById("decimal");
+var secOut = document.getElementById("sec");
+var minOut = document.getElementById("min");
+var colon = document.getElementById("colon");
+var timesOut = document.getElementById("timeOut");
+var timesList = document.getElementById("timeList");
+var clearAll = document.getElementById("clear");
+var timesDisplay = new Array();
+var csTimes = new Array();
+var avAll = 0;
+var avAllOut = document.getElementById("overallAv");
+var best = 999999999999999999;
+var bestOut = document.getElementById("fastest");
+var worst = 0;
+var numSolves = 0;
+var total = 0;
+var numSolvesOut = document.getElementById("solveNum");
+generateScramble();
+
+function timer() {
+  decimal++;
+  cs++; //counts time in centiseconds
+  decimalOut.innerHTML = decimal;
+  if (decimal >= 100) {
+    decimal = 0;
+    sec++;
+
+    if (sec > 59) {
+      sec = 0;
+      min++;
+      colon.innerHTML = ":";
+      minOut.innerHTML = min;
+    }
+    if (sec <= 9 && min > 0) {
+      sec = "0" + sec;
+    }
+    secOut.innerHTML = sec;
+  }
+
+  if (decimal <= 9) {
+    decimal = '0' + decimal;
+    decimalOut.innerHTML = decimal;
+  }
+
+}
+window.onkeyup = run;
+
+function run() {
+  if (!running) {
+    decimal = 0;
+    sec = 0;
+    min = 0;
+    cs = 0;
+    secOut.innerHTML = "0";
+    minOut.innerHTML = "";
+    colon.innerHTML = "";
+    running = true;
+    scramble = "";
+    generateScramble();
+    interval = setInterval(timer, 10);
+  } else if (running) {
+    running = false;
+    clearInterval(interval);
+    timesDisplay.push(" " + timesOut.innerHTML);
+    csTimes.push(cs);
+    timesList.innerHTML = timesDisplay;
+    calculateStats();
+  }
+}
+
+function generateScramble() {
+  var move; //includes face to turn and how to turn it. Ex. 2F
+  var face; //Face to turn. Either R, L, F, B, U, or D
+  var faceNum; //1-6, corresponds to face R-D
+  var lastFaceNum = 10; //The face of the previous turn
+  var turn; //How to turn a face. Either ', 2, or nothing.
+  var scramble = ""; //inlucdes 25 moves
+  var output = document.getElementById("scram");
+  for (var x = 0; x < 25; x++) {
+    do {
+      faceNum = Math.floor(Math.random() * 6) + 1;
+    } while (faceNum === lastFaceNum); //the same face can't appear in consecutive moves.
+    lastFaceNum = faceNum;
+    if (faceNum === 1) {
+      face = "R";
+    }
+    if (faceNum === 2) {
+      face = "L";
+    }
+    if (faceNum === 3) {
+      face = "U";
+    }
+    if (faceNum === 4) {
+      face = "D";
+    }
+    if (faceNum === 5) {
+      face = "F";
+    }
+    if (faceNum === 6) {
+      face = "B";
+    }
+    turn = Math.floor(Math.random() * 3) + 1;
+    if (turn === 1) {
+      move = face;
+    }
+    if (turn === 2) {
+      move = face + "2";
+    }
+    if (turn === 3) {
+      move = face + "'";
+    }
+
+    scramble += move + " ";
+  }
+  output.innerHTML = scramble;
+}
+clearAll.onclick = clearTimes;
+
+function clearTimes() {
+  numSolves = 0;
+  numSolvesOut.innerHTML = "Solves: " + numSolves;
+  best = 99999999999;
+  bestOut.innerHTML = "Best: ";
+  worst = 0;
+  avAll = 0;
+  total = 0;
+  avAllOut.innerHTML = "Average: ";
+  timesDisplay = [];
+  csTimes = [];
+  timesList.innerHTML = timesDisplay;
+}
+
+function calculateStats() {
+  numSolves++;
+  total = 0;
+  numSolvesOut.innerHTML = "Solves: " + numSolves;
+  for (var x = 0; x < csTimes.length; x++) {
+    if (csTimes[x] < best) {
+      best = csTimes[x];
+    }
+    if (csTimes[x] > worst) {
+      worst = csTimes[x];
+    }
+    total += csTimes[x];
+  }
+  avAll = total / numSolves;
+  avAllOut.innerHTML = "Average: " + formatTime(avAll);
+  bestOut.innerHTML = "Best: " + formatTime(best);
+}
+
+function formatTime(t) {
+  //m = minute, s = second, c = centisecond
+  var m = 0,
+    s = 0,
+    c = 0,
+    out = "";
+  m = Math.floor(t / 6000);
+  t = t % 6000;
+  s = Math.floor(t / 100);
+  t = t % 100;
+  c = Math.floor(t);
+  if (m < 1) {
+    m = "";
+  } else {
+    m = m + ":";
+    if (s < 10) {
+      s = "0" + s;
+    }
+  }
+  if (c < 10) {
+    c = "0" + c;
+  }
+
+  out = "" + m + s + "." + c;
+  return out;
+}
+</script>
+</body>
+</HTML>
